@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: Tahoma, sans-serif;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 90px 20px 0;
+}
+
+.header {
+  background-color: #000000;
+  height: 90px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.nav-link {
+  color: #E9E600;
+  text-decoration: none;
+}
+
+.logo {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 44px;
+  font-weight: bold;
+  padding: 0 40px;
+  line-height: 80px;
+}
+
+.nav-menu {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+
+.nav-menu-item {
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 27px;
+  margin: 0 10px;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.nav-menu-link {
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active {
+  background-color: #C7C500;
+  transition: 0.5s;
+}
+
+.nav-toggle {
+  color: #E9E600;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  line-height: 60px;
+  cursor: pointer;
+
+  display: none;
+}
+.imagendelogo {
+  padding: 23px;
+}
+.blanco{
+  color:white;
+  padding-top: 13px;
+}
+.container {
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .header {
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 25px;
+    padding: 0 20px;
+    line-height: 60px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #000;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    padding: 20px 0;
+
+    height: calc(100% - 60px);
+    overflow-y: auto;
+
+    left: 100%;
+    transition: left 0.3s;
+  }
+
+  .nav-menu-item {
+    line-height: 70px;
+  }
+
+  .nav-menu-link:hover,
+  .nav-menu-link_active {
+    background: none;
+    color: #E9E600;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu_visible {
+    left: 0;
+  }
+  .imagendelogo {
+    padding: 9px;
+  }
+  .nav-toggle:focus:not(:focus-visible) {
+    outline: none;
+  }
+  .blanco {
+    padding-top: 2px;
+  }
+
+}
